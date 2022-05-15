@@ -1,0 +1,195 @@
+@keyframes changeShape
+{
+	0%
+	{
+		border-radius: 0%;
+	}
+	100%
+	{
+		border-radius: 50%;
+	}
+}
+
+@keyframes jump
+{
+	0%
+	{
+		transform: translate(0px,0px);
+	}
+	25%
+	{
+		transform: translate(0px,-100px);
+	}
+	50%
+	{
+		transform: translate(0px,0px);
+	}
+	75%
+	{
+		transform: translate(0px,-75px);
+	}
+	100%
+	{
+		transform: translate(0px,0px);
+	}
+}
+
+@keyframes rotating
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	100%
+	{
+		transform: rotate(720deg);
+	}
+}
+
+@keyframes changeSize
+{
+	from
+	{
+		height: 15%;
+		width: 15vh;
+	}
+	to
+	{
+		height: 1%;
+		width: 1vh;
+	}
+}
+
+@keyframes cube-3d
+{
+	from
+	{
+		transform: rotateX(0deg) rotateY(0deg);
+	}
+	to
+	{
+		transform: rotateX(720deg) rotateY(360deg);
+	}
+}
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+#div1,#div2,#div3,#div4
+{
+	height: 15%;
+	width: 15vh;
+	position: absolute;
+	background: linear-gradient(red,blue);
+	border: 10px solid black;
+}
+
+#div1
+{	
+	top: 5%;
+	left: 15vh;
+	animation: changeShape 1s ease-in-out infinite alternate;
+}
+
+#div2
+{
+	top: 35%;
+	left: 15vh;
+	animation: rotating 1s ease-in-out infinite alternate-reverse;
+}
+
+#div3
+{
+	top: 75%;
+	left: 15vh;
+	animation: jump 1s ease-in-out infinite;
+}
+
+#div4
+{
+	top: 5%;
+	left: 45vh;
+	animation-name: changeShape,rotating,changeSize;
+	animation-duration: 1s,1s,1s;
+	animation-timing-function: ease-in-out,ease-in-out,ease-in-out;
+	animation-iteration-count: infinite,infinite,infinite;
+	animation-direction: alternate,alternate,alternate;
+}
+
+#cube
+{
+	height: 15vh;
+	width: 15vh;
+	position: relative;
+	background-color: red;
+	top: 35vh;
+	left: 45vh;
+	transform-style: preserve-3d;
+	perspective: 100000px;
+	animation: cube-3d 1s ease-in-out infinite alternate;
+	/*transition: all 5s;*/
+}
+
+#cube1
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: cyan;
+}
+
+#cube2
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	transform: rotateY(90deg) translateZ(-7.5vh) translateX(-7.5vh);
+}
+
+#cube2
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: blue;
+	transform: rotateY(90deg) translateZ(-7.5vh) translateX(-7.5vh);
+}
+
+#cube3
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: green;
+	transform: rotateY(90deg) translateZ(7.5vh) translateX(-7.5vh);
+}
+
+#cube4
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: yellow;
+	transform: rotateY(0deg) translateZ(15vh);
+}
+
+#cube5
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: brown;
+	transform: rotateX(90deg) translateZ(7.5vh) translateY(7.5vh);
+}
+
+#cube6
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	transform: rotateX(90deg) translateZ(-7.5vh) translateY(7.5vh);
+}

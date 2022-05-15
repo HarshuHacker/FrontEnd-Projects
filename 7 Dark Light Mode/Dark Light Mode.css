@@ -1,0 +1,44 @@
+body
+{
+  background-color: white;
+}
+
+#main-content
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+}
+
+#toggle
+{
+  height: 30px;
+  width: 60px;
+  border: 5px solid black;
+  border-radius: 50px;
+  position: relative;
+  background-color: black;
+}
+
+#toggle-circle
+{
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  position: absolute;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.colour-white
+{
+  color: white;
+}
+
+.colour-black
+{
+  background-color: black;
+}

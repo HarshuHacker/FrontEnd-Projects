@@ -1,0 +1,61 @@
+#main-div
+{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#outer-circle
+{
+  height: 300px;
+  width: 300px;
+  background-color: green;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+}
+
+#inner-shape
+{
+  height: 190px;
+  width: 190px;
+  background-color: white;  
+  transition: all 1s;
+}
+
+button
+{
+  border-radius: 10px;
+  background-color: white;
+  font-size: 1.5rem;
+  margin-top: 60px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.red-colour
+{
+  background-color: red;
+}
+
+.blue-colour
+{
+  background-color: blue;
+}
+
+.triangle-shape
+{
+  border-bottom: 190px solid white;
+  border-right: 190px solid transparent;
+}
+
+.circle-shape
+{
+  height: 190px;
+  width: 190px;
+  border-radius: 50%;
+}
